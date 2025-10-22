@@ -1,0 +1,56 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "experience": "Experience",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, I'm",
+        "title": "Full Stack Developer",
+        "description": "Full-stack developer with 5+ years of experience focused on web development. Visionary and creative problem solver. Autodidact who rapidly understands new concepts, ideas, technologies and methodologies.",
+        "contactButton": "Contact Me",
+        "projectsButton": "View Projects"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "I've been working as a web developer since 2019, with more than 5 years of university studies and projects as a self-taught developer. Currently, I focus on web technologies like React, Node, Express and MySQL.",
+        "location": "Based in",
+        "experience": "5+ years of experience",
+        "skills": "Skills"
+    },
+    "projects": {
+        "title": "Projects",
+        "subtitle": "Some of the projects I've worked on, showing my experience in different technologies and development approaches."
+    },
+    "experience": {
+        "title": "Experience",
+        "subtitle": "My professional career and the roles I've held throughout my career.",
+        "technologiesUsed": "Technologies used:"
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Do you have a project in mind? I'd love to hear about it. I'm available for new opportunities and collaborations.",
+        "contactInfo": "Contact Information",
+        "socialNetworks": "Social Networks",
+        "sendMessage": "Send me a message",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "your@email.com",
+        "subjectPlaceholder": "Message subject",
+        "messagePlaceholder": "Tell me about your project...",
+        "sendButton": "Send Message"
+    },
+    "footer": {
+        "description": "Full-stack developer passionate about creating innovative and efficient web solutions. Always learning and growing in the world of technology.",
+        "links": "Links",
+        "contact": "Contact",
+        "rights": "All rights reserved.",
+        "madeWith": "Made with",
+        "in": "in Argentina"
+    }
+}

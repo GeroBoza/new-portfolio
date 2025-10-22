@@ -1,10 +1,14 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { personalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import SocialLinks from "./SocialLinks";
 
 const Hero = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <div className="container mx-auto px-6 py-20">
@@ -22,7 +26,7 @@ const Hero = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-5xl lg:text-6xl font-bold mb-6"
                         >
-                            Hola, soy{" "}
+                            {t("hero.greeting")}{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                                 {personalInfo.name.split(" ")[0]}
                             </span>
@@ -34,7 +38,7 @@ const Hero = () => {
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className="text-2xl lg:text-3xl font-semibold mb-6 text-gray-300"
                         >
-                            {personalInfo.title}
+                            {t("hero.title")}
                         </motion.h2>
 
                         <motion.p
@@ -43,7 +47,7 @@ const Hero = () => {
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="text-lg text-gray-300 mb-8 leading-relaxed"
                         >
-                            {personalInfo.description}
+                            {t("hero.description")}
                         </motion.p>
 
                         <motion.div
@@ -58,7 +62,7 @@ const Hero = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
                             >
-                                Contactame
+                                {t("hero.contactButton")}
                             </motion.a>
                             <motion.a
                                 href="#projects"
@@ -66,7 +70,7 @@ const Hero = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:bg-purple-400 hover:text-white"
                             >
-                                Ver Proyectos
+                                {t("hero.projectsButton")}
                             </motion.a>
                         </motion.div>
 
@@ -93,13 +97,14 @@ const Hero = () => {
                                 className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1"
                             />
                             <div className="relative bg-slate-900 rounded-full p-2">
-                                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                                    <span className="text-6xl font-bold text-white">
-                                        {personalInfo.name
-                                            .split(" ")
-                                            .map((n) => n[0])
-                                            .join("")}
-                                    </span>
+                                <div className="w-80 h-80 rounded-full overflow-hidden">
+                                    <Image
+                                        src="/me.jpg"
+                                        alt={personalInfo.name}
+                                        width={320}
+                                        height={320}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                             </div>
                         </div>

@@ -18,16 +18,16 @@ export const personalInfo: PersonalInfo = {
             url: "https://www.linkedin.com/in/geronimoboza/",
             icon: "linkedin",
         },
-        {
-            name: "Facebook",
-            url: "https://www.facebook.com/gero.boza",
-            icon: "facebook",
-        },
-        {
-            name: "Instagram",
-            url: "https://www.instagram.com/geroboza/",
-            icon: "instagram",
-        },
+        // {
+        //     name: "Facebook",
+        //     url: "https://www.facebook.com/gero.boza",
+        //     icon: "facebook",
+        // },
+        // {
+        //     name: "Instagram",
+        //     url: "https://www.instagram.com/geroboza/",
+        //     icon: "instagram",
+        // },
     ],
     skills: [
         "JavaScript",

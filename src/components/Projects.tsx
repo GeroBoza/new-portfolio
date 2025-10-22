@@ -1,10 +1,13 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { personalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="projects" className="py-20 bg-gray-50">
             <div className="container mx-auto px-6">
@@ -15,11 +18,12 @@ const Projects = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Proyectos</h2>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        {t("projects.title")}
+                    </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Algunos de los proyectos en los que he trabajado, mostrando mi experiencia
-                        en diferentes tecnologías y enfoques de desarrollo.
+                        {t("projects.subtitle")}
                     </p>
                 </motion.div>
 

@@ -1,12 +1,15 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import LanguageSelector from "./LanguageSelector";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,11 +21,11 @@ const Navigation = () => {
     }, []);
 
     const navItems = [
-        { name: "Inicio", href: "#home" },
-        { name: "Sobre mí", href: "#about" },
-        { name: "Proyectos", href: "#projects" },
-        { name: "Experiencia", href: "#experience" },
-        { name: "Contacto", href: "#contact" },
+        { name: t("nav.home"), href: "#home" },
+        { name: t("nav.about"), href: "#about" },
+        { name: t("nav.projects"), href: "#projects" },
+        { name: t("nav.experience"), href: "#experience" },
+        { name: t("nav.contact"), href: "#contact" },
     ];
 
     const scrollToSection = (href: string) => {
@@ -46,7 +49,7 @@ const Navigation = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <motion.div whileHover={{ scale: 1.05 }} className="text-2xl font-bold">
-                        <a
+                        {/* <a
                             href="#home"
                             onClick={(e) => {
                                 e.preventDefault();
@@ -57,7 +60,7 @@ const Navigation = () => {
                             }`}
                         >
                             GB
-                        </a>
+                        </a> */}
                     </motion.div>
 
                     {/* Desktop Navigation */}
@@ -83,6 +86,7 @@ const Navigation = () => {
                                 {item.name}
                             </motion.a>
                         ))}
+                        <LanguageSelector scrolled={scrolled} />
                     </div>
 
                     {/* Mobile Menu Button */}

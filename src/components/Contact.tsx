@@ -1,11 +1,14 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { personalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 import SocialLinks from "./SocialLinks";
 
 const Contact = () => {
+    const { t } = useLanguage();
+
     return (
         <section
             id="contact"
@@ -19,11 +22,12 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Contacto</h2>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                        {t("contact.title")}
+                    </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-8"></div>
                     <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                        ¿Tienes un proyecto en mente? Me encantaría escuchar sobre él. Estoy
-                        disponible para nuevas oportunidades y colaboraciones.
+                        {t("contact.subtitle")}
                     </p>
                 </motion.div>
 
@@ -38,7 +42,7 @@ const Contact = () => {
                     >
                         <div>
                             <h3 className="text-2xl font-bold text-white mb-6">
-                                Información de contacto
+                                {t("contact.contactInfo")}
                             </h3>
 
                             <div className="space-y-6">
@@ -50,7 +54,9 @@ const Contact = () => {
                                         <Mail className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
-                                        <p className="text-gray-300 text-sm">Email</p>
+                                        <p className="text-gray-300 text-sm">
+                                            {t("contact.email")}
+                                        </p>
                                         <p className="text-white font-semibold">
                                             {personalInfo.email}
                                         </p>
@@ -65,7 +71,9 @@ const Contact = () => {
                                         <MapPin className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
-                                        <p className="text-gray-300 text-sm">Ubicación</p>
+                                        <p className="text-gray-300 text-sm">
+                                            {t("about.location")}
+                                        </p>
                                         <p className="text-white font-semibold">
                                             {personalInfo.location}
                                         </p>
@@ -76,7 +84,7 @@ const Contact = () => {
 
                         <div>
                             <h4 className="text-xl font-semibold text-white mb-4">
-                                Redes sociales
+                                {t("contact.socialNetworks")}
                             </h4>
                             <SocialLinks />
                         </div>
@@ -90,7 +98,9 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="bg-white/10 backdrop-blur-sm rounded-lg p-8"
                     >
-                        <h3 className="text-2xl font-bold text-white mb-6">Envíame un mensaje</h3>
+                        <h3 className="text-2xl font-bold text-white mb-6">
+                            {t("contact.sendMessage")}
+                        </h3>
 
                         <form className="space-y-6">
                             <div>
@@ -98,14 +108,14 @@ const Contact = () => {
                                     htmlFor="name"
                                     className="block text-gray-300 text-sm font-medium mb-2"
                                 >
-                                    Nombre
+                                    {t("contact.name")}
                                 </label>
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
                                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                    placeholder="Tu nombre"
+                                    placeholder={t("contact.namePlaceholder")}
                                 />
                             </div>
 
@@ -114,14 +124,14 @@ const Contact = () => {
                                     htmlFor="email"
                                     className="block text-gray-300 text-sm font-medium mb-2"
                                 >
-                                    Email
+                                    {t("contact.email")}
                                 </label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                    placeholder="tu@email.com"
+                                    placeholder={t("contact.emailPlaceholder")}
                                 />
                             </div>
 
@@ -130,14 +140,14 @@ const Contact = () => {
                                     htmlFor="subject"
                                     className="block text-gray-300 text-sm font-medium mb-2"
                                 >
-                                    Asunto
+                                    {t("contact.subject")}
                                 </label>
                                 <input
                                     type="text"
                                     id="subject"
                                     name="subject"
                                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                    placeholder="Asunto del mensaje"
+                                    placeholder={t("contact.subjectPlaceholder")}
                                 />
                             </div>
 
@@ -146,14 +156,14 @@ const Contact = () => {
                                     htmlFor="message"
                                     className="block text-gray-300 text-sm font-medium mb-2"
                                 >
-                                    Mensaje
+                                    {t("contact.message")}
                                 </label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     rows={4}
                                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
-                                    placeholder="Cuéntame sobre tu proyecto..."
+                                    placeholder={t("contact.messagePlaceholder")}
                                 ></textarea>
                             </div>
 
@@ -163,7 +173,7 @@ const Contact = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
                             >
-                                Enviar Mensaje
+                                {t("contact.sendButton")}
                             </motion.button>
                         </form>
                     </motion.div>

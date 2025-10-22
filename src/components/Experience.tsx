@@ -1,10 +1,13 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { personalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const Experience = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="experience" className="py-20 bg-white">
             <div className="container mx-auto px-6">
@@ -16,12 +19,11 @@ const Experience = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                        Experiencia
+                        {t("experience.title")}
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Mi trayectoria profesional y los roles que he desempeñado a lo largo de mi
-                        carrera.
+                        {t("experience.subtitle")}
                     </p>
                 </motion.div>
 
@@ -69,7 +71,7 @@ const Experience = () => {
 
                                 <div>
                                     <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                                        Tecnologías utilizadas:
+                                        {t("experience.technologiesUsed")}
                                     </h4>
                                     <div className="flex flex-wrap gap-2">
                                         {exp.technologies.map((tech) => (

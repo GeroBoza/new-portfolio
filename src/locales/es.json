@@ -1,0 +1,56 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "experience": "Experiencia",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy",
+        "title": "Desarrollador Full Stack",
+        "description": "Desarrollador full-stack con 5+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
+        "contactButton": "Contactame",
+        "projectsButton": "Ver Proyectos"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "description": "He estado trabajando como desarrollador web desde 2019, con más de 5 años de estudios universitarios y proyectos como autodidacta. Actualmente me enfoco en tecnologías web como React, Node, Express y MySQL.",
+        "location": "Basado en",
+        "experience": "3+ años de experiencia",
+        "skills": "Habilidades"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "subtitle": "Algunos de los proyectos en los que he trabajado, mostrando mi experiencia en diferentes tecnologías y enfoques de desarrollo."
+    },
+    "experience": {
+        "title": "Experiencia",
+        "subtitle": "Mi trayectoria profesional y los roles que he desempeñado a lo largo de mi carrera.",
+        "technologiesUsed": "Tecnologías utilizadas:"
+    },
+    "contact": {
+        "title": "Contacto",
+        "subtitle": "¿Tienes un proyecto en mente? Me encantaría escuchar sobre él. Estoy disponible para nuevas oportunidades y colaboraciones.",
+        "contactInfo": "Información de contacto",
+        "socialNetworks": "Redes sociales",
+        "sendMessage": "Envíame un mensaje",
+        "name": "Nombre",
+        "email": "Email",
+        "subject": "Asunto",
+        "message": "Mensaje",
+        "namePlaceholder": "Tu nombre",
+        "emailPlaceholder": "tu@email.com",
+        "subjectPlaceholder": "Asunto del mensaje",
+        "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+        "sendButton": "Enviar Mensaje"
+    },
+    "footer": {
+        "description": "Desarrollador full-stack apasionado por crear soluciones web innovadoras y eficientes. Siempre aprendiendo y creciendo en el mundo de la tecnología.",
+        "links": "Enlaces",
+        "contact": "Contacto",
+        "rights": "Todos los derechos reservados.",
+        "madeWith": "Hecho con",
+        "in": "en Argentina"
+    }
+}

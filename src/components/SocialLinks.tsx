@@ -2,7 +2,7 @@
 
 import { personalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
-import { Facebook, Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const SocialLinks = () => {
     const getIcon = (iconName: string) => {
@@ -11,10 +11,10 @@ const SocialLinks = () => {
                 return <Github className="w-6 h-6" />;
             case "linkedin":
                 return <Linkedin className="w-6 h-6" />;
-            case "facebook":
-                return <Facebook className="w-6 h-6" />;
-            case "instagram":
-                return <Instagram className="w-6 h-6" />;
+            // case "facebook":
+            //     return <Facebook className="w-6 h-6" />;
+            // case "instagram":
+            //     return <Instagram className="w-6 h-6" />;
             default:
                 return <Mail className="w-6 h-6" />;
         }

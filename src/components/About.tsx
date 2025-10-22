@@ -1,25 +1,36 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { personalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Cloud, Code, Database, Globe } from "lucide-react";
 
 const About = () => {
+    const { t } = useLanguage();
+
     const skillCategories = [
         {
             title: "Frontend",
             icon: <Code className="w-6 h-6" />,
-            skills: ["React", "JavaScript", "HTML", "CSS", "Material-UI", "Bootstrap"],
+            skills: [
+                "React",
+                "Next.js",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Material-UI",
+                "Tailwind CSS",
+            ],
         },
         {
             title: "Backend",
             icon: <Database className="w-6 h-6" />,
-            skills: ["Node.js", "Express", "MySQL", "MongoDB"],
+            skills: ["Node.js", "Express", "Nest.js", "MySQL", "MongoDB", "PostgreSQL"],
         },
         {
             title: "DevOps",
             icon: <Cloud className="w-6 h-6" />,
-            skills: ["AWS S3", "Nginx", "Git", "GitHub"],
+            skills: ["AWS S3", "Nginx", "Git", "GitHub", "GitLab"],
         },
         {
             title: "Web",
@@ -38,7 +49,9 @@ const About = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Sobre mí</h2>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        {t("about.title")}
+                    </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
                 </motion.div>
 
@@ -52,24 +65,21 @@ const About = () => {
                         className="space-y-6"
                     >
                         <p className="text-lg text-gray-700 leading-relaxed">
-                            {personalInfo.description}
+                            {t("hero.description")}
                         </p>
 
                         <p className="text-lg text-gray-700 leading-relaxed">
-                            He estado trabajando como desarrollador web desde 2019, con más de 5
-                            años de estudios universitarios y proyectos como autodidacta.
-                            Actualmente me enfoco en tecnologías web como React, Node, Express y
-                            MySQL.
+                            {t("about.description")}
                         </p>
 
                         <div className="flex items-center gap-4 text-gray-600">
                             <span className="flex items-center gap-2">
                                 <Globe className="w-5 h-5" />
-                                Basado en {personalInfo.location}
+                                {t("about.location")} {personalInfo.location}
                             </span>
                             <span className="flex items-center gap-2">
                                 <Code className="w-5 h-5" />
-                                3+ años de experiencia
+                                {t("about.experience")}
                             </span>
                         </div>
                     </motion.div>
@@ -82,7 +92,9 @@ const About = () => {
                         viewport={{ once: true }}
                         className="space-y-6"
                     >
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6">Habilidades</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                            {t("about.skills")}
+                        </h3>
 
                         {skillCategories.map((category, index) => (
                             <motion.div
