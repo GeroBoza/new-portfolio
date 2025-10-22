@@ -63,7 +63,7 @@ const Navigation = () => {
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                scrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+                scrolled || isOpen ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
             }`}
         >
             <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -73,18 +73,18 @@ const Navigation = () => {
                         whileHover={{ scale: 1.05 }}
                         className="text-xl sm:text-2xl font-bold"
                     >
-                        <a
+                        {/* <a
                             href="#home"
                             onClick={(e) => {
                                 e.preventDefault();
                                 scrollToSection("#home");
                             }}
                             className={`transition-colors duration-300 ${
-                                scrolled ? "text-gray-900" : "text-white"
+                                scrolled || isOpen ? "text-gray-900" : "text-white"
                             }`}
                         >
                             Gero Boza
-                        </a>
+                        </a> */}
                     </motion.div>
 
                     {/* Desktop Navigation */}
@@ -102,7 +102,7 @@ const Navigation = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 whileHover={{ y: -2 }}
                                 className={`font-medium transition-colors duration-300 ${
-                                    scrolled
+                                    scrolled || isOpen
                                         ? "text-gray-700 hover:text-purple-600"
                                         : "text-white hover:text-purple-300"
                                 }`}
@@ -110,14 +110,14 @@ const Navigation = () => {
                                 {item.name}
                             </motion.a>
                         ))}
-                        <LanguageSelector scrolled={scrolled} />
+                        <LanguageSelector scrolled={scrolled || isOpen} />
                     </div>
 
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className={`md:hidden p-2 rounded-lg transition-colors duration-300 mobile-menu ${
-                            scrolled
+                            scrolled || isOpen
                                 ? "text-gray-700 hover:bg-gray-100"
                                 : "text-white hover:bg-white/10"
                         }`}
@@ -135,7 +135,7 @@ const Navigation = () => {
                         opacity: isOpen ? 1 : 0,
                     }}
                     transition={{ duration: 0.3 }}
-                    className="md:hidden overflow-hidden mobile-menu"
+                    className="md:hidden overflow-visible mobile-menu"
                 >
                     <div className="py-4 space-y-1">
                         {navItems.map((item) => (
@@ -147,7 +147,7 @@ const Navigation = () => {
                                     scrollToSection(item.href);
                                 }}
                                 className={`block px-4 py-3 rounded-lg font-medium transition-colors duration-300 ${
-                                    scrolled
+                                    scrolled || isOpen
                                         ? "text-gray-700 hover:bg-gray-100"
                                         : "text-white hover:bg-white/10"
                                 }`}
@@ -155,8 +155,8 @@ const Navigation = () => {
                                 {item.name}
                             </a>
                         ))}
-                        <div className="px-4 py-3">
-                            <LanguageSelector scrolled={scrolled} />
+                        <div className="px-4 py-3 pb-6">
+                            <LanguageSelector scrolled={scrolled || isOpen} />
                         </div>
                     </div>
                 </motion.div>

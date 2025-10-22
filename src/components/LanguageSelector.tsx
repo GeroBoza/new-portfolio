@@ -33,6 +33,10 @@ const LanguageSelector = ({ scrolled = false }: LanguageSelectorProps) => {
         }, 150); // 150ms delay
     };
 
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
     // Cleanup timeout on unmount
     useEffect(() => {
         return () => {
@@ -42,9 +46,31 @@ const LanguageSelector = ({ scrolled = false }: LanguageSelectorProps) => {
         };
     }, []);
 
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (isOpen && !(event.target as Element).closest(".language-selector")) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen]);
+
     return (
-        <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div
+            className="relative language-selector"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             <motion.button
+                onClick={handleClick}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300 cursor-pointer ${
@@ -67,7 +93,7 @@ const LanguageSelector = ({ scrolled = false }: LanguageSelectorProps) => {
                     y: isOpen ? 0 : -10,
                 }}
                 transition={{ duration: 0.2 }}
-                className={`absolute top-full right-0 mt-2 w-40 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-white/20 transition-all duration-300 z-50 ${
+                className={`absolute top-full right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 transition-all duration-300 z-[9999] ${
                     isOpen ? "pointer-events-auto" : "pointer-events-none"
                 }`}
             >
