@@ -66,14 +66,14 @@ const Navigation = () => {
                 scrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
             }`}
         >
-            <div className="container mx-auto px-4 sm:px-6">
+            <div className="container mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         className="text-xl sm:text-2xl font-bold"
                     >
-                        {/* <a
+                        <a
                             href="#home"
                             onClick={(e) => {
                                 e.preventDefault();
@@ -84,7 +84,7 @@ const Navigation = () => {
                             }`}
                         >
                             Gero Boza
-                        </a> */}
+                        </a>
                     </motion.div>
 
                     {/* Desktop Navigation */}

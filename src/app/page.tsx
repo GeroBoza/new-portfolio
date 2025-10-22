@@ -8,7 +8,7 @@ import Projects from "@/components/Projects";
 
 export default function Home() {
     return (
-        <div id="home">
+        <div id="home" className="overflow-x-hidden">
             <Navigation />
             <Hero />
             <About />
