@@ -12,20 +12,20 @@ const Hero = () => {
 
     return (
         <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <div className="container mx-auto px-6 py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Text Content */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-white"
+                        className="text-white text-center lg:text-left"
                     >
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-5xl lg:text-6xl font-bold mb-6"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
                         >
                             {t("hero.greeting")}{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -37,31 +37,22 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-2xl lg:text-3xl font-semibold mb-6 text-gray-300"
+                            className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 text-gray-300"
                         >
                             {t("hero.title")}
                         </motion.h2>
-
-                        {/* <motion.p
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.6 }}
-                            className="text-lg text-gray-300 mb-8 leading-relaxed"
-                        >
-                            {t("hero.description")}
-                        </motion.p> */}
 
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.8 }}
-                            className="flex flex-col sm:flex-row gap-4 mb-8"
+                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8"
                         >
                             <motion.a
                                 href="#projects"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+                                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 sm:px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
                             >
                                 {t("hero.projectsButton")}
                             </motion.a>
@@ -69,7 +60,7 @@ const Hero = () => {
                                 href="#contact"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:bg-purple-400 hover:text-white"
+                                className="border-2 border-purple-400 text-purple-400 px-6 sm:px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:bg-purple-400 hover:text-white"
                             >
                                 {t("hero.contactButton")}
                             </motion.a>
@@ -89,7 +80,7 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="flex justify-center lg:justify-end"
+                        className="flex justify-center lg:justify-end order-first lg:order-last"
                     >
                         <div className="relative">
                             <motion.div
@@ -98,7 +89,7 @@ const Hero = () => {
                                 className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1"
                             />
                             <div className="relative bg-slate-900 rounded-full p-2">
-                                <div className="w-80 h-80 rounded-full overflow-hidden">
+                                <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden">
                                     <Image
                                         src="/me.jpg"
                                         alt={personalInfo.name}

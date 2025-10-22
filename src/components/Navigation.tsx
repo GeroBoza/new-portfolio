@@ -20,6 +20,27 @@ const Navigation = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Close mobile menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (isOpen && !(event.target as Element).closest(".mobile-menu")) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.body.style.overflow = "unset";
+        };
+    }, [isOpen]);
+
     const navItems = [
         { name: t("nav.home"), href: "#home" },
         { name: t("nav.about"), href: "#about" },
@@ -42,13 +63,16 @@ const Navigation = () => {
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                scrolled ? "bg-white/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+                scrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
             }`}
         >
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-4 sm:px-6">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <motion.div whileHover={{ scale: 1.05 }} className="text-2xl font-bold">
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        className="text-xl sm:text-2xl font-bold"
+                    >
                         {/* <a
                             href="#home"
                             onClick={(e) => {
@@ -64,7 +88,7 @@ const Navigation = () => {
                     </motion.div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
                         {navItems.map((item, index) => (
                             <motion.a
                                 key={item.name}
@@ -92,11 +116,12 @@ const Navigation = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
+                        className={`md:hidden p-2 rounded-lg transition-colors duration-300 mobile-menu ${
                             scrolled
                                 ? "text-gray-700 hover:bg-gray-100"
                                 : "text-white hover:bg-white/10"
                         }`}
+                        aria-label="Toggle menu"
                     >
                         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
@@ -110,9 +135,9 @@ const Navigation = () => {
                         opacity: isOpen ? 1 : 0,
                     }}
                     transition={{ duration: 0.3 }}
-                    className="md:hidden overflow-hidden"
+                    className="md:hidden overflow-hidden mobile-menu"
                 >
-                    <div className="py-4 space-y-2">
+                    <div className="py-4 space-y-1">
                         {navItems.map((item) => (
                             <a
                                 key={item.name}
@@ -121,7 +146,7 @@ const Navigation = () => {
                                     e.preventDefault();
                                     scrollToSection(item.href);
                                 }}
-                                className={`block px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
+                                className={`block px-4 py-3 rounded-lg font-medium transition-colors duration-300 ${
                                     scrolled
                                         ? "text-gray-700 hover:bg-gray-100"
                                         : "text-white hover:bg-white/10"
@@ -130,6 +155,9 @@ const Navigation = () => {
                                 {item.name}
                             </a>
                         ))}
+                        <div className="px-4 py-3">
+                            <LanguageSelector scrolled={scrolled} />
+                        </div>
                     </div>
                 </motion.div>
             </div>
