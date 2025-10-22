@@ -26,6 +26,7 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
     const [language, setLanguageState] = useState<Language>("en");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [translations, setTranslations] = useState<Record<string, any>>({});
 
     // Load translations when language changes
@@ -60,6 +61,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
     const t = (key: string): string => {
         const keys = key.split(".");
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let value: any = translations;
 
         for (const k of keys) {

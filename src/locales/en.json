@@ -9,7 +9,7 @@
     "hero": {
         "greeting": "Hi, I'm",
         "title": "Full Stack Developer",
-        "description": "Full-stack developer with 5+ years of experience focused on web development. Visionary and creative problem solver. Autodidact who rapidly understands new concepts, ideas, technologies and methodologies.",
+        "description": "I'm a Full-stack developer with 5+ years of experience focused on web development. Visionary and creative problem solver. Autodidact who rapidly understands new concepts, ideas, technologies and methodologies.",
         "contactButton": "Contact Me",
         "projectsButton": "View Projects"
     },
@@ -52,5 +52,46 @@
         "rights": "All rights reserved.",
         "madeWith": "Made with",
         "in": "in Argentina"
+    },
+    "personalInfo": {
+        "description": "Full-stack developer with 3+ years of experience focused on web development. Visionary and creative problem solver. Autodidact who rapidly understands new concepts, ideas, technologies and methodologies.",
+        "experience": {
+            "freelance": {
+                "title": "Full Stack Developer",
+                "company": "Freelance",
+                "period": "2019 - Present",
+                "description": "Development of complete web applications using modern technologies such as React, Node.js, Express and MySQL databases. Specialization in scalable and efficient solutions."
+            }
+        },
+        "projects": {
+            "clara": {
+                "title": "Clara Asprella - Portfolio",
+                "description": "Personal portfolio developed with modern technologies, including dynamic content management and responsive design."
+            },
+            "zapateria": {
+                "title": "Zapatería Avenida",
+                "description": "Complete e-commerce for shoe store with product management system, shopping cart and payment processing."
+            },
+            "infounlp": {
+                "title": "Facultad de Informática UNLP",
+                "description": "Institutional website developed with WordPress, including content management and responsive design."
+            },
+            "starwars": {
+                "title": "Star Wars App Challenge",
+                "description": "Interactive web application based on the Star Wars API, with advanced search and filtering features."
+            },
+            "estudiopereyra": {
+                "title": "Estudio Pereyra",
+                "description": "Corporate website for law firm with professional design and contact features."
+            },
+            "alianzafrancesa": {
+                "title": "Alianza Francesa",
+                "description": "Web portal for educational institution with course and event management system."
+            }
+        },
+        "buttons": {
+            "viewProject": "View Project",
+            "code": "Code"
+        }
     }
 }

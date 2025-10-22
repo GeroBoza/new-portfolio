@@ -1,12 +1,13 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { personalInfo } from "@/data/personalInfo";
+import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
 const Footer = () => {
     const { t } = useLanguage();
+    const personalInfo = getPersonalInfo(t);
     const currentYear = new Date().getFullYear();
 
     return (
@@ -20,7 +21,7 @@ const Footer = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <h3 className="text-xl font-bold mb-4">Geronimo Boza</h3>
+                        <h3 className="text-xl font-bold mb-4">Gerónimo Boza</h3>
                         <p className="text-gray-400 leading-relaxed">{t("footer.description")}</p>
                     </motion.div>
 
@@ -92,7 +93,7 @@ const Footer = () => {
                     className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"
                 >
                     <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                        © {currentYear} Geronimo Boza. {t("footer.rights")}
+                        © {currentYear} Gerónimo Boza. {t("footer.rights")}
                     </p>
 
                     <motion.p

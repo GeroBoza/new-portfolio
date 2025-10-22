@@ -6,14 +6,14 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Geronimo Boza - Full Stack Developer",
+    title: "Gerónimo Boza - Full Stack Developer",
     description:
         "Desarrollador full-stack con 3+ años de experiencia enfocado en desarrollo web. Especializado en React, Node.js, Express y MySQL.",
     keywords:
-        "Geronimo Boza, Desarrollador Full Stack, React, Node.js, JavaScript, Desarrollo Web, Argentina",
-    authors: [{ name: "Geronimo Boza" }],
+        "Gerónimo Boza, Desarrollador Full Stack, React, Node.js, JavaScript, Desarrollo Web, Argentina",
+    authors: [{ name: "Gerónimo Boza" }],
     openGraph: {
-        title: "Geronimo Boza - Full Stack Developer",
+        title: "Gerónimo Boza - Full Stack Developer",
         description:
             "Desarrollador full-stack con 3+ años de experiencia enfocado en desarrollo web.",
         type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Geronimo Boza - Full Stack Developer",
+        title: "Gerónimo Boza - Full Stack Developer",
         description:
             "Desarrollador full-stack con 3+ años de experiencia enfocado en desarrollo web.",
     },

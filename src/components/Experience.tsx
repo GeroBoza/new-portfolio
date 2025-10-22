@@ -1,12 +1,13 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { personalInfo } from "@/data/personalInfo";
+import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const Experience = () => {
     const { t } = useLanguage();
+    const personalInfo = getPersonalInfo(t);
 
     return (
         <section id="experience" className="py-20 bg-white">

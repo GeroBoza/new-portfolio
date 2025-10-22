@@ -1,12 +1,13 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { personalInfo } from "@/data/personalInfo";
+import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Cloud, Code, Database, Globe } from "lucide-react";
 
 const About = () => {
     const { t } = useLanguage();
+    const personalInfo = getPersonalInfo(t);
 
     const skillCategories = [
         {
@@ -32,11 +33,11 @@ const About = () => {
             icon: <Cloud className="w-6 h-6" />,
             skills: ["AWS S3", "Nginx", "Git", "GitHub", "GitLab"],
         },
-        {
-            title: "Web",
-            icon: <Globe className="w-6 h-6" />,
-            skills: ["Responsive Design", "SEO", "Performance"],
-        },
+        // {
+        //     title: "Web",
+        //     icon: <Globe className="w-6 h-6" />,
+        //     skills: ["Responsive Design", "SEO", "Performance"],
+        // },
     ];
 
     return (

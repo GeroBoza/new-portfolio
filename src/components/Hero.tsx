@@ -1,13 +1,14 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { personalInfo } from "@/data/personalInfo";
+import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SocialLinks from "./SocialLinks";
 
 const Hero = () => {
     const { t } = useLanguage();
+    const personalInfo = getPersonalInfo(t);
 
     return (
         <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -28,7 +29,7 @@ const Hero = () => {
                         >
                             {t("hero.greeting")}{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                                {personalInfo.name.split(" ")[0]}
+                                {personalInfo.name.split(" ")[0]}! 👋
                             </span>
                         </motion.h1>
 
@@ -41,14 +42,14 @@ const Hero = () => {
                             {t("hero.title")}
                         </motion.h2>
 
-                        <motion.p
+                        {/* <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="text-lg text-gray-300 mb-8 leading-relaxed"
                         >
                             {t("hero.description")}
-                        </motion.p>
+                        </motion.p> */}
 
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -57,20 +58,20 @@ const Hero = () => {
                             className="flex flex-col sm:flex-row gap-4 mb-8"
                         >
                             <motion.a
-                                href="#contact"
+                                href="#projects"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
                             >
-                                {t("hero.contactButton")}
+                                {t("hero.projectsButton")}
                             </motion.a>
                             <motion.a
-                                href="#projects"
+                                href="#contact"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:bg-purple-400 hover:text-white"
                             >
-                                {t("hero.projectsButton")}
+                                {t("hero.contactButton")}
                             </motion.a>
                         </motion.div>
 

@@ -1,12 +1,13 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { personalInfo } from "@/data/personalInfo";
+import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
     const { t } = useLanguage();
+    const personalInfo = getPersonalInfo(t);
 
     return (
         <section id="projects" className="py-20 bg-gray-50">
@@ -80,7 +81,7 @@ const Projects = () => {
                                         className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
                                     >
                                         <ExternalLink className="w-4 h-4" />
-                                        Ver Proyecto
+                                        {t("personalInfo.buttons.viewProject")}
                                     </motion.a>
 
                                     {project.githubUrl && (
@@ -93,7 +94,7 @@ const Projects = () => {
                                             className="flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:border-purple-500 hover:text-purple-500"
                                         >
                                             <Github className="w-4 h-4" />
-                                            Código
+                                            {t("personalInfo.buttons.code")}
                                         </motion.a>
                                     )}
                                 </div>

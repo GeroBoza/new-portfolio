@@ -1,10 +1,13 @@
 "use client";
 
-import { personalInfo } from "@/data/personalInfo";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const SocialLinks = () => {
+    const { t } = useLanguage();
+    const personalInfo = getPersonalInfo(t);
     const getIcon = (iconName: string) => {
         switch (iconName) {
             case "github":

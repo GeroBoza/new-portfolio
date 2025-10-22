@@ -9,7 +9,7 @@
     "hero": {
         "greeting": "Hola, soy",
         "title": "Desarrollador Full Stack",
-        "description": "Desarrollador full-stack con 5+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
+        "description": "Soy desarrollador full-stack con 5+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
         "contactButton": "Contactame",
         "projectsButton": "Ver Proyectos"
     },
@@ -52,5 +52,46 @@
         "rights": "Todos los derechos reservados.",
         "madeWith": "Hecho con",
         "in": "en Argentina"
+    },
+    "personalInfo": {
+        "description": "Desarrollador full-stack con 3+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
+        "experience": {
+            "freelance": {
+                "title": "Desarrollador Full Stack",
+                "company": "Contractor",
+                "period": "2019 - 2024",
+                "description": "Desarrollo de aplicaciones web completas utilizando tecnologías modernas como React, Node.js, Express y bases de datos MySQL. Especialización en soluciones escalables y eficientes."
+            }
+        },
+        "projects": {
+            "clara": {
+                "title": "Clara Asprella - Portfolio",
+                "description": "Portfolio personal desarrollado con tecnologías modernas, incluyendo gestión de contenido dinámico y diseño responsive."
+            },
+            "zapateria": {
+                "title": "Zapatería Avenida",
+                "description": "E-commerce completo para zapatería con sistema de gestión de productos, carrito de compras y procesamiento de pagos."
+            },
+            "infounlp": {
+                "title": "Facultad de Informática UNLP",
+                "description": "Sitio web institucional desarrollado con WordPress, incluyendo gestión de contenido y diseño responsive."
+            },
+            "starwars": {
+                "title": "Star Wars App Challenge",
+                "description": "Aplicación web interactiva basada en la API de Star Wars, con funcionalidades de búsqueda y filtrado avanzado."
+            },
+            "estudiopereyra": {
+                "title": "Estudio Pereyra",
+                "description": "Sitio web corporativo para estudio jurídico con diseño profesional y funcionalidades de contacto."
+            },
+            "alianzafrancesa": {
+                "title": "Alianza Francesa",
+                "description": "Portal web para institución educativa con sistema de gestión de cursos y eventos."
+            }
+        },
+        "buttons": {
+            "viewProject": "Ver Proyecto",
+            "code": "Código"
+        }
     }
 }

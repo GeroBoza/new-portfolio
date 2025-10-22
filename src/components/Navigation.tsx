@@ -59,7 +59,7 @@ const Navigation = () => {
                                 scrolled ? "text-gray-900" : "text-white"
                             }`}
                         >
-                            GB
+                            Gero Boza
                         </a> */}
                     </motion.div>
 

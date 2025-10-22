@@ -1,13 +1,14 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { personalInfo } from "@/data/personalInfo";
+import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 import SocialLinks from "./SocialLinks";
 
 const Contact = () => {
     const { t } = useLanguage();
+    const personalInfo = getPersonalInfo(t);
 
     return (
         <section
@@ -31,153 +32,58 @@ const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                    {/* Contact Info */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="space-y-8"
-                    >
-                        <div>
-                            <h3 className="text-2xl font-bold text-white mb-6">
-                                {t("contact.contactInfo")}
-                            </h3>
-
-                            <div className="space-y-6">
-                                <motion.div
-                                    whileHover={{ x: 10 }}
-                                    className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm"
-                                >
-                                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
-                                        <Mail className="w-6 h-6 text-white" />
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-300 text-sm">
-                                            {t("contact.email")}
-                                        </p>
-                                        <p className="text-white font-semibold">
-                                            {personalInfo.email}
-                                        </p>
-                                    </div>
-                                </motion.div>
-
-                                <motion.div
-                                    whileHover={{ x: 10 }}
-                                    className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm"
-                                >
-                                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
-                                        <MapPin className="w-6 h-6 text-white" />
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-300 text-sm">
-                                            {t("about.location")}
-                                        </p>
-                                        <p className="text-white font-semibold">
-                                            {personalInfo.location}
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 className="text-xl font-semibold text-white mb-4">
-                                {t("contact.socialNetworks")}
-                            </h4>
-                            <SocialLinks />
-                        </div>
-                    </motion.div>
-
-                    {/* Contact Form */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="bg-white/10 backdrop-blur-sm rounded-lg p-8"
-                    >
-                        <h3 className="text-2xl font-bold text-white mb-6">
-                            {t("contact.sendMessage")}
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="max-w-2xl mx-auto"
+                >
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                        <h3 className="text-2xl font-bold text-white mb-6 text-center">
+                            {t("contact.contactInfo")}
                         </h3>
 
-                        <form className="space-y-6">
-                            <div>
-                                <label
-                                    htmlFor="name"
-                                    className="block text-gray-300 text-sm font-medium mb-2"
-                                >
-                                    {t("contact.name")}
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                    placeholder={t("contact.namePlaceholder")}
-                                />
-                            </div>
-
-                            <div>
-                                <label
-                                    htmlFor="email"
-                                    className="block text-gray-300 text-sm font-medium mb-2"
-                                >
-                                    {t("contact.email")}
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                    placeholder={t("contact.emailPlaceholder")}
-                                />
-                            </div>
-
-                            <div>
-                                <label
-                                    htmlFor="subject"
-                                    className="block text-gray-300 text-sm font-medium mb-2"
-                                >
-                                    {t("contact.subject")}
-                                </label>
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    name="subject"
-                                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                    placeholder={t("contact.subjectPlaceholder")}
-                                />
-                            </div>
-
-                            <div>
-                                <label
-                                    htmlFor="message"
-                                    className="block text-gray-300 text-sm font-medium mb-2"
-                                >
-                                    {t("contact.message")}
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows={4}
-                                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
-                                    placeholder={t("contact.messagePlaceholder")}
-                                ></textarea>
-                            </div>
-
-                            <motion.button
-                                type="submit"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+                        <div className="space-y-6">
+                            <motion.div
+                                whileHover={{ x: 10 }}
+                                className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm"
                             >
-                                {t("contact.sendButton")}
-                            </motion.button>
-                        </form>
-                    </motion.div>
-                </div>
+                                <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
+                                    <Mail className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <p className="text-gray-300 text-sm">{t("contact.email")}</p>
+                                    <p className="text-white font-semibold">{personalInfo.email}</p>
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                whileHover={{ x: 10 }}
+                                className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm"
+                            >
+                                <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
+                                    <MapPin className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <p className="text-gray-300 text-sm">{t("about.location")}</p>
+                                    <p className="text-white font-semibold">
+                                        {personalInfo.location}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </div>
+
+                        <div className="mt-8">
+                            <h4 className="text-xl font-semibold text-white mb-4 text-center">
+                                {t("contact.socialNetworks")}
+                            </h4>
+                            <div className="flex justify-center">
+                                <SocialLinks />
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

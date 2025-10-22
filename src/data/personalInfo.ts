@@ -1,33 +1,22 @@
 import { PersonalInfo } from "@/types";
 
-export const personalInfo: PersonalInfo = {
-    name: "Geronimo Boza",
+// Base data that doesn't need translation
+export const basePersonalInfo = {
+    name: "Gerónimo Boza",
     title: "Full Stack Developer",
-    description:
-        "Desarrollador full-stack con 3+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
     location: "Argentina",
     email: "geronimoboza@gmail.com",
     socialLinks: [
-        {
-            name: "GitHub",
-            url: "https://github.com/GeroBoza",
-            icon: "github",
-        },
         {
             name: "LinkedIn",
             url: "https://www.linkedin.com/in/geronimoboza/",
             icon: "linkedin",
         },
-        // {
-        //     name: "Facebook",
-        //     url: "https://www.facebook.com/gero.boza",
-        //     icon: "facebook",
-        // },
-        // {
-        //     name: "Instagram",
-        //     url: "https://www.instagram.com/geroboza/",
-        //     icon: "instagram",
-        // },
+        {
+            name: "GitHub",
+            url: "https://github.com/GeroBoza",
+            icon: "github",
+        },
     ],
     skills: [
         "JavaScript",
@@ -45,71 +34,72 @@ export const personalInfo: PersonalInfo = {
         "GitHub",
         "Nginx",
     ],
-    experience: [
-        {
-            id: "1",
-            title: "Full Stack Developer",
-            company: "Freelance",
-            period: "2019 - Presente",
-            description:
-                "Desarrollo de aplicaciones web completas utilizando tecnologías modernas como React, Node.js, Express y bases de datos MySQL. Especialización en soluciones escalables y eficientes.",
-            technologies: ["React", "Node.js", "Express", "MySQL", "AWS S3", "JavaScript"],
-        },
-    ],
-    projects: [
-        {
-            id: "1",
-            title: "Clara Asprella - Portfolio",
-            description:
-                "Portfolio personal desarrollado con tecnologías modernas, incluyendo gestión de contenido dinámico y diseño responsive.",
-            technologies: ["Node.js", "Express", "React", "MySQL", "AWS S3"],
-            liveUrl: "https://asprella.com/",
-            image: "/images/clara.png",
-        },
-        {
-            id: "2",
-            title: "Zapatería Avenida",
-            description:
-                "E-commerce completo para zapatería con sistema de gestión de productos, carrito de compras y procesamiento de pagos.",
-            technologies: ["Node.js", "Express", "React", "MySQL", "AWS S3"],
-            liveUrl: "https://www.zapateriaavenida.com/",
-            image: "/images/zapateriaavenida.png",
-        },
-        {
-            id: "3",
-            title: "Facultad de Informática UNLP",
-            description:
-                "Sitio web institucional desarrollado con WordPress, incluyendo gestión de contenido y diseño responsive.",
-            technologies: ["WordPress", "PHP", "MySQL", "CSS", "JavaScript"],
-            liveUrl: "https://www.info.unlp.edu.ar/",
-            image: "/images/infounlp.png",
-        },
-        {
-            id: "4",
-            title: "Star Wars App Challenge",
-            description:
-                "Aplicación web interactiva basada en la API de Star Wars, con funcionalidades de búsqueda y filtrado avanzado.",
-            technologies: ["Node.js", "Express", "React", "MySQL", "AWS S3"],
-            liveUrl: "https://sw-app-challenge.netlify.app/",
-            image: "/images/starwars.png",
-        },
-        {
-            id: "5",
-            title: "Estudio Pereyra",
-            description:
-                "Sitio web corporativo para estudio jurídico con diseño profesional y funcionalidades de contacto.",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            liveUrl: "http://estudiopereyra.com.ar/",
-            image: "/images/estudiopereyra.png",
-        },
-        {
-            id: "6",
-            title: "Alianza Francesa",
-            description:
-                "Portal web para institución educativa con sistema de gestión de cursos y eventos.",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            liveUrl: "https://www.alianzafrancesalp.org.ar/",
-            image: "/images/alianzafrancesa.png",
-        },
-    ],
+};
+
+// Function to get translated personal info
+export const getPersonalInfo = (t: (key: string) => string): PersonalInfo => {
+    return {
+        ...basePersonalInfo,
+        description: t("personalInfo.description"),
+        experience: [
+            {
+                id: "1",
+                title: t("personalInfo.experience.freelance.title"),
+                company: t("personalInfo.experience.freelance.company"),
+                period: t("personalInfo.experience.freelance.period"),
+                description: t("personalInfo.experience.freelance.description"),
+                technologies: ["React", "Node.js", "Express", "MySQL", "AWS S3", "JavaScript"],
+            },
+        ],
+        projects: [
+            {
+                id: "1",
+                title: t("personalInfo.projects.clara.title"),
+                description: t("personalInfo.projects.clara.description"),
+                technologies: ["Node.js", "Express", "React", "MySQL", "AWS S3"],
+                liveUrl: "https://asprella.com/",
+                image: "/images/clara.png",
+            },
+            {
+                id: "2",
+                title: t("personalInfo.projects.zapateria.title"),
+                description: t("personalInfo.projects.zapateria.description"),
+                technologies: ["Node.js", "Express", "React", "MySQL", "AWS S3"],
+                liveUrl: "https://www.zapateriaavenida.com/",
+                image: "/images/zapateriaavenida.png",
+            },
+            {
+                id: "3",
+                title: t("personalInfo.projects.infounlp.title"),
+                description: t("personalInfo.projects.infounlp.description"),
+                technologies: ["WordPress", "PHP", "MySQL", "CSS", "JavaScript"],
+                liveUrl: "https://www.info.unlp.edu.ar/",
+                image: "/images/infounlp.png",
+            },
+            {
+                id: "4",
+                title: t("personalInfo.projects.starwars.title"),
+                description: t("personalInfo.projects.starwars.description"),
+                technologies: ["Node.js", "Express", "React", "MySQL", "AWS S3"],
+                liveUrl: "https://sw-app-challenge.netlify.app/",
+                image: "/images/starwars.png",
+            },
+            {
+                id: "5",
+                title: t("personalInfo.projects.estudiopereyra.title"),
+                description: t("personalInfo.projects.estudiopereyra.description"),
+                technologies: ["HTML", "CSS", "JavaScript"],
+                liveUrl: "http://estudiopereyra.com.ar/",
+                image: "/images/estudiopereyra.png",
+            },
+            {
+                id: "6",
+                title: t("personalInfo.projects.alianzafrancesa.title"),
+                description: t("personalInfo.projects.alianzafrancesa.description"),
+                technologies: ["HTML", "CSS", "JavaScript"],
+                liveUrl: "https://www.alianzafrancesalp.org.ar/",
+                image: "/images/alianzafrancesa.png",
+            },
+        ],
+    };
 };
