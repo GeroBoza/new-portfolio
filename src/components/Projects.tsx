@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const Projects = () => {
     const { t } = useLanguage();
@@ -22,7 +23,7 @@ const Projects = () => {
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                         {t("projects.title")}
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-8"></div>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         {t("projects.subtitle")}
                     </p>
@@ -40,13 +41,14 @@ const Projects = () => {
                             className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                         >
                             {/* Project Image Placeholder */}
-                            <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                                <span className="text-4xl font-bold text-white">
-                                    {project.title
-                                        .split(" ")
-                                        .map((word) => word[0])
-                                        .join("")}
-                                </span>
+                            <div className="h-auto bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={1000}
+                                    height={1000}
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
 
                             <div className="p-6">
@@ -78,7 +80,7 @@ const Projects = () => {
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+                                        className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
                                     >
                                         <ExternalLink className="w-4 h-4" />
                                         {t("personalInfo.buttons.viewProject")}
@@ -91,7 +93,7 @@ const Projects = () => {
                                             rel="noopener noreferrer"
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
-                                            className="flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:border-purple-500 hover:text-purple-500"
+                                            className="flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:border-blue-500 hover:text-blue-500"
                                         >
                                             <Github className="w-4 h-4" />
                                             {t("personalInfo.buttons.code")}

@@ -53,7 +53,7 @@ const About = () => {
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                         {t("about.title")}
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-8"></div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -107,7 +107,7 @@ const About = () => {
                                 className="bg-gray-50 p-6 rounded-lg"
                             >
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="text-purple-600">{category.icon}</div>
+                                    <div className="text-blue-600">{category.icon}</div>
                                     <h4 className="text-lg font-semibold text-gray-900">
                                         {category.title}
                                     </h4>
@@ -116,7 +116,7 @@ const About = () => {
                                     {category.skills.map((skill) => (
                                         <span
                                             key={skill}
-                                            className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 rounded-full text-sm font-medium"
+                                            className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-full text-sm font-medium"
                                         >
                                             {skill}
                                         </span>

@@ -56,11 +56,23 @@
     "personalInfo": {
         "description": "Full-stack developer with 3+ years of experience focused on web development. Visionary and creative problem solver. Autodidact who rapidly understands new concepts, ideas, technologies and methodologies.",
         "experience": {
-            "freelance": {
+            "globant": {
                 "title": "Full Stack Developer",
-                "company": "Freelance",
-                "period": "2019 - Present",
-                "description": "Development of complete web applications using modern technologies such as React, Node.js, Express and MySQL databases. Specialization in scalable and efficient solutions."
+                "company": "Globant",
+                "period": "2024 - Present",
+                "description": "Customer: Santander Bank (Broker)\n\nParticipation in the development of the Broker and internal Platform for the client Santander Bank:\n- Development of micro frontends for the Santander Valores web broker using React.js, React Query, Jest, and micro frontends architecture.\n- Design and development of components for the internal investment platform using React.js, React Query, Jest, and micro frontends.\n- Design and development of components for the internal component library using React.js and Jest.\n- Development of backend microservices for the API that supports the internal investment platform."
+            },
+            "contractor": {
+                "title": "Full Stack Developer",
+                "company": "Contractor",
+                "period": "2019 - 2024",
+                "description": "Development of a stock control web application for a plant nursery:\n- Designed and developed both the frontend and backend using React.js, Node.js, Express.js, and MySQL.\n- Implemented functionalities to manage inventory, track products, and generate real-time stock reports.\n\nDevelopment of a catalog-style web application for a shoe store:\n- Created a comprehensive web application enabling the shoe store to display its product catalog online.\n- Used React.js for the frontend and Node.js with Express.js for the backend, along with MySQL for database management.\n- Developed product search, filtering, and management functionalities.\n\nParticipation in the development of a mobile app for a bromatology company:\n- Developed a RESTful API using Node.js and Express.js.\n- The API enabled integration with a mobile application, facilitating the uploading and management of bromatology inspection reports.\n- Worked on optimizing queries and data structures in MySQL to improve system performance and scalability."
+            },
+            "ulthar": {
+                "title": "Full Stack Developer",
+                "company": "Ulthar",
+                "period": "2019 - 2021",
+                "description": "Development of web applications using React.js, Material UI, Node.js, Express.js, MySQL, and AWS S3."
             }
         },
         "projects": {

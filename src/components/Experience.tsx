@@ -22,7 +22,7 @@ const Experience = () => {
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                         {t("experience.title")}
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-8"></div>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         {t("experience.subtitle")}
                     </p>
@@ -41,14 +41,14 @@ const Experience = () => {
                             <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                                     <div className="flex items-center gap-4 mb-4 md:mb-0">
-                                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
+                                        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-lg">
                                             <Briefcase className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
                                             <h3 className="text-2xl font-bold text-gray-900">
                                                 {exp.title}
                                             </h3>
-                                            <p className="text-lg text-purple-600 font-semibold">
+                                            <p className="text-lg text-blue-600 font-semibold">
                                                 {exp.company}
                                             </p>
                                         </div>
@@ -66,7 +66,7 @@ const Experience = () => {
                                     </div>
                                 </div>
 
-                                <p className="text-gray-700 leading-relaxed mb-6">
+                                <p className="text-gray-700 leading-relaxed mb-6 whitespace-pre-line">
                                     {exp.description}
                                 </p>
 
@@ -78,7 +78,7 @@ const Experience = () => {
                                         {exp.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 rounded-full text-sm font-medium"
+                                                className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-full text-sm font-medium"
                                             >
                                                 {tech}
                                             </span>

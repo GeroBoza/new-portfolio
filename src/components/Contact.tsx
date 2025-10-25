@@ -13,7 +13,7 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+            className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"
         >
             <div className="container mx-auto px-6">
                 <motion.div
@@ -26,7 +26,7 @@ const Contact = () => {
                     <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
                         {t("contact.title")}
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-8"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-8"></div>
                     <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                         {t("contact.subtitle")}
                     </p>
@@ -49,7 +49,7 @@ const Contact = () => {
                                 whileHover={{ x: 10 }}
                                 className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm"
                             >
-                                <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
+                                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-lg">
                                     <Mail className="w-6 h-6 text-white" />
                                 </div>
                                 <div>
@@ -62,7 +62,7 @@ const Contact = () => {
                                 whileHover={{ x: 10 }}
                                 className="flex items-center gap-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm"
                             >
-                                <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg">
+                                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-lg">
                                     <MapPin className="w-6 h-6 text-white" />
                                 </div>
                                 <div>

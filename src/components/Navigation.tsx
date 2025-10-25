@@ -103,8 +103,8 @@ const Navigation = () => {
                                 whileHover={{ y: -2 }}
                                 className={`font-medium transition-colors duration-300 ${
                                     scrolled || isOpen
-                                        ? "text-gray-700 hover:text-purple-600"
-                                        : "text-white hover:text-purple-300"
+                                        ? "text-gray-700 hover:text-blue-600"
+                                        : "text-white hover:text-blue-300"
                                 }`}
                             >
                                 {item.name}

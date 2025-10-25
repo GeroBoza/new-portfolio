@@ -1,20 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 
 const Footer = () => {
     const { t } = useLanguage();
-    const personalInfo = getPersonalInfo(t);
+    // const personalInfo = getPersonalInfo(t);
     const currentYear = new Date().getFullYear();
 
     return (
         <footer className="bg-gray-900 text-white py-12">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                    {/* About */}
+                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +22,6 @@ const Footer = () => {
                         <p className="text-gray-400 leading-relaxed">{t("footer.description")}</p>
                     </motion.div>
 
-                    {/* Quick Links */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +65,6 @@ const Footer = () => {
                         </ul>
                     </motion.div>
 
-                    {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +77,7 @@ const Footer = () => {
                             <p>{personalInfo.location}</p>
                         </div>
                     </motion.div>
-                </div>
+                </div> */}
 
                 {/* Bottom Bar */}
                 <motion.div
@@ -90,19 +85,11 @@ const Footer = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                     viewport={{ once: true }}
-                    className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"
+                    className="flex flex-col md:flex-row justify-center items-center"
                 >
                     <p className="text-gray-400 text-sm mb-4 md:mb-0">
                         © {currentYear} Gerónimo Boza. {t("footer.rights")}
                     </p>
-
-                    <motion.p
-                        className="text-gray-400 text-sm flex items-center gap-1"
-                        whileHover={{ scale: 1.05 }}
-                    >
-                        {t("footer.madeWith")} <Heart className="w-4 h-4 text-red-500" />{" "}
-                        {t("footer.in")}
-                    </motion.p>
                 </motion.div>
             </div>
         </footer>
