@@ -9,29 +9,29 @@
     "hero": {
         "greeting": "Hola, soy",
         "title": "Desarrollador Full Stack",
-        "description": "Soy desarrollador full-stack con 5+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
+        "description": "Soy un desarrollador full-stack apasionado, con más de 5 años de experiencia en la creación de aplicaciones web. Me especializo en tecnologías JavaScript a lo largo de todo el stack y tengo experiencia profesional trabajando con React, Node.js y bases de datos modernas.",
         "contactButton": "Contactame",
         "projectsButton": "Ver Proyectos"
     },
     "about": {
         "title": "Sobre mí",
-        "description": "He estado trabajando como desarrollador web desde 2019, con más de 5 años de estudios universitarios y proyectos como autodidacta. Actualmente me enfoco en tecnologías web como React, Node, Express y MySQL.",
-        "location": "Basado en",
-        "experience": "3+ años de experiencia",
+        "description": "Comencé mi camino en el desarrollo en 2019 y, desde entonces, he trabajado en diversos proyectos que me ayudaron a crecer tanto técnica como profesionalmente. Soy licenciado en Sistemas y actualmente me enfoco en tecnologías como React, Next.js, Node, Express y Nest.js.",
+        "location": "Ubicado en",
+        "experience": "5+ años de experiencia",
         "skills": "Habilidades"
     },
     "projects": {
         "title": "Proyectos",
-        "subtitle": "Algunos de los proyectos en los que he trabajado, mostrando mi experiencia en diferentes tecnologías y enfoques de desarrollo."
+        "subtitle": "Estos son algunos de mis proyectos más recientes. Cada uno presentó desafíos únicos y oportunidades para aprender y aplicar diferentes tecnologías."
     },
     "experience": {
         "title": "Experiencia",
         "subtitle": "Mi trayectoria profesional y los roles que he desempeñado a lo largo de mi carrera.",
-        "technologiesUsed": "Tecnologías utilizadas:"
+        "technologiesUsed": "Tecnologías:"
     },
     "contact": {
         "title": "Contacto",
-        "subtitle": "¿Tienes un proyecto en mente? Me encantaría escuchar sobre él. Estoy disponible para nuevas oportunidades y colaboraciones.",
+        "subtitle": "¿Tenés un proyecto en mente? Me encantaría escuchar sobre él. Estoy disponible para nuevas oportunidades y colaboraciones.",
         "contactInfo": "Información de contacto",
         "socialNetworks": "Redes sociales",
         "sendMessage": "Envíame un mensaje",
@@ -54,7 +54,7 @@
         "in": "en Argentina"
     },
     "personalInfo": {
-        "description": "Desarrollador full-stack con 3+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
+        "description": "Desarrollador full-stack con 5+ años de experiencia enfocado en desarrollo web. Visionario y solucionador creativo de problemas. Autodidacta que entiende rápidamente nuevos conceptos, ideas, tecnologías y metodologías.",
         "experience": {
             "globant": {
                 "title": "Desarrollador Full Stack",
@@ -70,7 +70,7 @@
             },
             "ulthar": {
                 "title": "Desarrollador Full Stack",
-                "company": "Ulthar",
+                "company": "Ulthar Software",
                 "period": "2019 - 2021",
                 "description": "Desarrollo de aplicaciones web utilizando React.js, Material UI, Node.js, Express.js, MySQL y AWS S3."
             }

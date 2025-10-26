@@ -9,25 +9,25 @@
     "hero": {
         "greeting": "Hi, I'm",
         "title": "Full Stack Developer",
-        "description": "I'm a Full-stack developer with 5+ years of experience focused on web development. Visionary and creative problem solver. Autodidact who rapidly understands new concepts, ideas, technologies and methodologies.",
+        "description": "I'm a passionate fullstack developer with over 5 years of experience in building web applications. I specialize in JavaScript technologies across the stack and have professional experience working with React, Node.js, and modern databases.",
         "contactButton": "Contact Me",
         "projectsButton": "View Projects"
     },
     "about": {
         "title": "About Me",
-        "description": "I've been working as a web developer since 2019, with more than 5 years of university studies and projects as a self-taught developer. Currently, I focus on web technologies like React, Node, Express and MySQL.",
+        "description": "I started my journey in development back in 2019, and since then I’ve worked on various projects that helped me grow both technically and professionally. I hold a degree in Systems and currently focus on technologies like React, Next.js, Node, Express, and Nest.js.",
         "location": "Based in",
         "experience": "5+ years of experience",
         "skills": "Skills"
     },
     "projects": {
         "title": "Projects",
-        "subtitle": "Some of the projects I've worked on, showing my experience in different technologies and development approaches."
+        "subtitle": "Here are some of my recent projects. Each one presented unique challenges and opportunities to learn and apply different technologies."
     },
     "experience": {
         "title": "Experience",
         "subtitle": "My professional career and the roles I've held throughout my career.",
-        "technologiesUsed": "Technologies used:"
+        "technologiesUsed": "Technologies:"
     },
     "contact": {
         "title": "Contact",
@@ -54,7 +54,6 @@
         "in": "in Argentina"
     },
     "personalInfo": {
-        "description": "Full-stack developer with 3+ years of experience focused on web development. Visionary and creative problem solver. Autodidact who rapidly understands new concepts, ideas, technologies and methodologies.",
         "experience": {
             "globant": {
                 "title": "Full Stack Developer",
@@ -70,7 +69,7 @@
             },
             "ulthar": {
                 "title": "Full Stack Developer",
-                "company": "Ulthar",
+                "company": "Ulthar Software",
                 "period": "2019 - 2021",
                 "description": "Development of web applications using React.js, Material UI, Node.js, Express.js, MySQL, and AWS S3."
             }

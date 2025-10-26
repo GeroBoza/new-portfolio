@@ -88,7 +88,8 @@ const Footer = () => {
                     className="flex flex-col md:flex-row justify-center items-center"
                 >
                     <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                        © {currentYear} Gerónimo Boza. {t("footer.rights")}
+                        © {currentYear} Gerónimo Boza.
+                        {/* {t("footer.rights")} */}
                     </p>
                 </motion.div>
             </div>

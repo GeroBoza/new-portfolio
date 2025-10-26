@@ -58,6 +58,8 @@ export const getPersonalInfo = (t: (key: string) => string): PersonalInfo => {
                     "JavaScript",
                     "TypeScript",
                 ],
+                image: "/img/globant_logo.jpeg",
+                companyUrl: "https://www.globant.com/",
             },
             {
                 id: "2",
@@ -75,6 +77,7 @@ export const getPersonalInfo = (t: (key: string) => string): PersonalInfo => {
                     "JavaScript",
                     "TypeScript",
                 ],
+                icon: "Laptop",
             },
             {
                 id: "3",
@@ -92,6 +95,8 @@ export const getPersonalInfo = (t: (key: string) => string): PersonalInfo => {
                     "JavaScript",
                     "TypeScript",
                 ],
+                image: "/img/ulthar_logo.jpeg",
+                companyUrl: "https://www.linkedin.com/company/ulthar-software/",
             },
         ],
         projects: [

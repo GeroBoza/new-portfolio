@@ -15,6 +15,9 @@ export interface Experience {
     period: string;
     description: string;
     technologies: string[];
+    icon?: string;
+    image?: string;
+    companyUrl?: string;
 }
 
 export interface SocialLink {

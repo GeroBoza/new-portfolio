@@ -3,11 +3,44 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getPersonalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Calendar, Laptop, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const Experience = () => {
     const { t } = useLanguage();
     const personalInfo = getPersonalInfo(t);
+
+    // Function to render the appropriate icon or image
+    const renderIconOrImage = (iconName?: string, imagePath?: string) => {
+        // Priority: image over icon
+        if (imagePath) {
+            return (
+                <Image
+                    src={imagePath}
+                    alt="Company logo"
+                    width={48}
+                    height={48}
+                    className="object-contain rounded-lg"
+                />
+            );
+        }
+
+        return (
+            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-lg flex items-center justify-center">
+                <Laptop className="w-6 h-6 text-white" />
+            </div>
+        );
+        // if i want to switch on different icons, i can do it like this:
+        // switch (iconName) {
+        //     case "Code":
+        //         return <Code className="w-6 h-6 text-white" />;
+        //     case "Laptop":
+        //         return <Laptop className="w-6 h-6 text-white" />;
+        //     case "Briefcase":
+        //     default:
+        //         return <Briefcase className="w-6 h-6 text-white" />;
+        // }
+    };
 
     return (
         <section id="experience" className="py-20 bg-white">
@@ -41,15 +74,20 @@ const Experience = () => {
                             <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                                     <div className="flex items-center gap-4 mb-4 md:mb-0">
-                                        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-lg">
-                                            <Briefcase className="w-6 h-6 text-white" />
-                                        </div>
+                                        <div>{renderIconOrImage(exp.icon, exp.image)}</div>
                                         <div>
                                             <h3 className="text-2xl font-bold text-gray-900">
                                                 {exp.title}
                                             </h3>
                                             <p className="text-lg text-blue-600 font-semibold">
-                                                {exp.company}
+                                                <a
+                                                    href={exp.companyUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-blue-600 font-semibold hover:text-blue-800"
+                                                >
+                                                    {exp.company}
+                                                </a>
                                             </p>
                                         </div>
                                     </div>
